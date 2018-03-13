@@ -54,5 +54,10 @@ class Perjalanan extends Model
         'nama' => 'required'
     ];
 
+    public function universitas()
+    {
+        return $this->belongsTo(Universitas::class,'id_universitas');
+    }
+
     
 }

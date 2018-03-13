@@ -38,7 +38,7 @@ class PerjalananAPIController extends AppBaseController
     {
         $this->perjalananRepository->pushCriteria(new RequestCriteria($request));
         $this->perjalananRepository->pushCriteria(new LimitOffsetCriteria($request));
-        $perjalanans = $this->perjalananRepository->all();
+        $perjalanans = $this->perjalananRepository->with('universitas')->all();
 
         return $this->sendResponse($perjalanans->toArray(), 'Perjalanans retrieved successfully');
     }

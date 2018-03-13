@@ -38,7 +38,7 @@ class UniversitasAPIController extends AppBaseController
     {
         $this->universitasRepository->pushCriteria(new RequestCriteria($request));
         $this->universitasRepository->pushCriteria(new LimitOffsetCriteria($request));
-        $universitas = $this->universitasRepository->all();
+        $universitas = $this->universitasRepository->with('kota')->all();
 
         return $this->sendResponse($universitas->toArray(), 'Universitas retrieved successfully');
     }

@@ -63,5 +63,10 @@ class Universitas extends Model
         'alamat' => 'required'
     ];
 
+    public function kota()
+    {
+        return $this->belongsTo(Kota::class,'id_kota');
+    }
+
     
 }
