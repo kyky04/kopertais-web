@@ -27,3 +27,9 @@ Route::resource('kotas', 'KotaController');
 Route::resource('universitas', 'UniversitasController');
 
 Route::resource('perjalanans', 'PerjalananController');
+
+Route::resource('pegawais', 'PegawaiController');
+
+Route::resource('rekomendasis', 'RekomendasiController');
+
+Route::resource('perjalananDinas', 'PerjalananDinasController');

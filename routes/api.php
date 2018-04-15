@@ -25,3 +25,9 @@ Route::resource('kotas', 'KotaAPIController');
 Route::resource('universitas', 'UniversitasAPIController');
 
 Route::resource('perjalanans', 'PerjalananAPIController');
+
+Route::resource('pegawais', 'PegawaiAPIController');
+
+Route::resource('rekomendasis', 'RekomendasiAPIController');
+
+Route::resource('perjalanan_dinas', 'PerjalananDinasAPIController');
